@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>Breakout Game</title>
+        <style>
+            canvas{
+                background: "black";
+                display:block;
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <canvas id="myCanvas" width="480" height="100">
+        </canvas>
+        
+        <script type="text/javascript">
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+                                                            //Circle
+            ctx.beginPath();
+            ctx.arc(240,160,20,0,Math.PI*2,false);
+            ctx.fillStyle="red";
+            ctx.fill();
+            ctx.closePath();
+            
+            //rectangle
+            ctx.beginPath();
+            ctx.rect(20,40,50,50);
+            ctx.fillStyle="#ff0000";
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+                                                            //stroked rectangle
+            ctx.beginPath();
+            ctx.rect(160,10,100,40);
+            ctx.strokeStyle="rgba(0,0,255,0.5)";
+            ctx.stroke();
+            ctx.closePath();
+            </script>>
+    </body>
+</html>
